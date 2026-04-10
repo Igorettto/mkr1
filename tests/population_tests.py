@@ -26,3 +26,11 @@ def test_read_population_data(sample_txt_file):
     assert data[1]['year'] == 2021
     assert data[2]['country'] == 'Poland'
     assert data[3]['year'] == 2021
+
+@pytest.mark.parametrize("country, period, expected_change", [
+    ('A', '2000-2001', 20),
+    ('B', '2000-2001', -10),
+])
+def test_calculate_population_data(parsed_data, country, period, expected_change):
+    changes = calculate_population_change(parsed_data)
+    assert changes[country][period] == expected_change
