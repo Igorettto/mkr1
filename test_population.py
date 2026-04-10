@@ -13,10 +13,10 @@ def sample_txt_file(tmp_path):
 def parsed_data():
     """Повертає вже розпарсені дані для тестування"""
     return [
-        {'country': 'A', 'year': '2000', 'population': '100'},
-        {'country': 'A', 'year': '2001', 'population': '120'},
-        {'country': 'B', 'year': '2000', 'population': '50'},
-        {'country': 'B', 'year': '2001', 'population': '40'},
+        {'country': 'A', 'year': 2000, 'population': 100},
+        {'country': 'A', 'year': 2001, 'population': 120},
+        {'country': 'B', 'year': 2000, 'population': 50},
+        {'country': 'B', 'year': 2001, 'population': 40},
     ]
 
 def test_read_population_data(sample_txt_file):
