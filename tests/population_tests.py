@@ -18,3 +18,11 @@ def parsed_data():
         {'country': 'B', 'year': '2000', 'population': '50'},
         {'country': 'B', 'year': '2001', 'population': '40'},
     ]
+
+def test_read_population_data(sample_txt_file):
+    data = read_population_data(sample_txt_file)
+    assert len(data) == 4
+    assert data[0]['country'] == 'Ukraine'
+    assert data[1]['year'] == 2021
+    assert data[2]['country'] == 'Poland'
+    assert data[3]['year'] == 2021
